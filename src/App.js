@@ -15,9 +15,10 @@ function App() {
       <TodoSearch/>
 
       <TodoList>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <TodoItem text= 'cortar cebolla' completed= {true}/>
+        <TodoItem text= 'pelar papas' completed= {false}/>
+        <TodoItem text= 'Calentar Agua' completed= {false}/>
+        <TodoItem text= 'Comprar insumos' completed= {false}/>
       </TodoList>
 
       <CreateTodoButton/>
