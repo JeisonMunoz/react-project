@@ -8,10 +8,15 @@ import React from 'react';
 
 
 function App() {
+  const[searchValue, setSearchValue]=React.useState('');
+  
   return (
     <React.Fragment>
       <TodoCounter completed={16} total={25}/>
-      <TodoSearch/>
+      <TodoSearch
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
 
       <TodoList>
         <TodoItem text= 'cortar cebolla' completed= {true}/>
