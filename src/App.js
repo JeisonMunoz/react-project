@@ -22,7 +22,14 @@ function App() {
   ).length;
   const totalTodos = todos.length;
 
-  console.log('Los usuarios buscan todos de ' + searchValue);
+  const searchedTodos = todos.filter(
+    (todo) => {
+      return todo.text.includes(searchValue)
+    }
+  )
+
+  console.log('los usuarios buscan todos de ' + searchValue)
+
 
   return (
     <React.Fragment>
@@ -33,7 +40,8 @@ function App() {
       />
 
       <TodoList>
-      {defaultTodos.map(todo => (
+        {/* en vez de usar el defaultTodos que se venia usando, se va a usar el array derivado searchedTodos, que es un filtro del estado searchValues */}
+      {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
