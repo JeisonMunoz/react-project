@@ -24,7 +24,9 @@ function App() {
 
   const searchedTodos = todos.filter(
     (todo) => {
-      return todo.text.includes(searchValue)
+      // se convierte la validacion a minusculas para encontrar cualquier busqueda con letras mayusculas
+      // Se converte el searchvalue a minusculas tambien ya que es el valor buscado por el usuario
+      return todo.text.toLowerCase().includes(searchValue.toLocaleLowerCase())
     }
   )
 
